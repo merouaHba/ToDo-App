@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>To Do App | Mern</title>
+    <!-- Main Template CSS File -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Render All Elements Normally -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- animation Library -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="">
+    <!-- start header -->
+    <header>
+        <div class="container">
+            <h3>TO DO</h3>
+            <span id="toggle"><i class='mode-icon bx bxs-moon'></i></span> 
+            <!-- <i class='bx bxs-sun'></i> -->
+            <!-- <i class="fa-solid fa-moon"></i> -->
+            <!-- <i class="fa-solid fa-sun"></i> -->
+        </div>
+    </header>
+    <!-- end header -->
+    <!-- start main content -->
+    <main>
+        <div class="container">
+            <div class="write">
+                <span ><i class='add bx bx-circle'></i></span>
+                <input type="text" placeholder="Add task">
+            </div>
+
+            <ul class="todo-list"></ul>
+            <div class="filter-bar">
+                <span class="nbr-item"></span>
+                <ul class="filter">
+                    <li class="active" data-filter="all">All</li>
+                    <li data-filter="active">Active</li>
+                    <li data-filter="completed">Completed</li>
+                </ul>
+                <span class="clear">Clear Completed</span>
+            </div>
+            <p>Drag and Drop to reorder list</p>
+        </div>
+    </main>
+    <!-- end main content -->
+    <!-- main script -->
+    <script src="js/DarkMode.js"></script>
+    <script src="js/NbrItems.js"></script>
+    <script src="js/DragAndDrop.js"></script>
+    <script src="js/ToDoApp.js"></script>
+    <script src="js/ClearCompleted.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

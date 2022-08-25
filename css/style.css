@@ -1,0 +1,292 @@
+/* start variables */
+:root {
+  --white-color: #fff;
+  --border-color: #d8d6d6;
+}
+
+.dark {
+  background-color: #1f212e;
+  --white-color: #252a41;
+  --border-color: #8b97c6;
+}
+
+/* end variables */
+/* start global rules */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #d3d3d3;
+}
+
+/* body.dark {
+  font-family: 'Inter', sans-serif;
+  background-color: #000;
+} */
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  padding-left: 350px;
+  padding-right: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+/* end global rules */
+
+/* start header */
+header {
+  background-image: url('../images/mount-mont-blanc-covered-in-the-snow-reflecting-on-the-water-in-the-evening-in-chamonix-france.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0;
+  position: relative;
+}
+
+header::before {
+  top: 0;
+  left: 0;
+  background: linear-gradient(90deg, hsla(270, 39%, 44%, .85) 0%, hsla(223, 75%, 57%, .85) 100%);
+  background: -moz-linear-gradient(90deg, hsla(270, 39%, 44%, .85) 0%, hsla(223, 75%, 57%, .85) 100%);
+  background: -webkit-linear-gradient(90deg, hsla(270, 39%, 44%, .85) 0%, hsla(223, 75%, 57%, .85) 100%);
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--white-color);
+  width: 75%;
+}
+
+header .container h3 {
+  letter-spacing: 5px;
+}
+
+header .container i {
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+/* end header */
+/* start main content*/
+main {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 25%;
+}
+
+main .container .write {
+  position: relative;
+}
+
+main .container input {
+  border: none;
+  position: relative;
+  padding: 10px 50px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  background-color: var(--white-color);
+}
+
+main .container input:focus {
+  outline: none;
+}
+
+main .container i {
+  position: absolute;
+  color: var(--border-color);
+  font-size: 1.5em;
+  z-index: 2;
+  top: 52%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  left: 5%;
+}
+
+main .container .todo-list {
+  margin-top: 50px;
+}
+
+main .container .todo-list li {
+  position: relative;
+}
+
+main .container .todo-list li input {
+  padding: 10px 50px;
+  /* background-color: var(--white-color); */
+  border-top: 1px solid var(--border-color);
+  position: relative;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  cursor: default;
+}
+
+main .container .todo-list li.done input {
+  text-decoration: line-through;
+  color: var(--border-color);
+}
+
+main .container .todo-list li:first-of-type input {
+  border: none;
+  border-radius: 5px 5px 0 0;
+  -webkit-border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
+  -ms-border-radius: 5px 5px 0 0;
+  -o-border-radius: 5px 5px 0 0;
+}
+
+main .container .todo-list li i {
+  position: absolute;
+  color: var(--border-color);
+  font-size: 1.5em;
+  z-index: 2;
+  top: 52%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  left: 5%;
+  cursor: pointer;
+}
+
+main .container .todo-list li.done i {
+  /* color: hsla(223, 67%, 67%, 1); */
+  color: linear-gradient(90deg, hsla(270, 39%, 44%, .85) 0%, hsla(223, 75%, 57%, .85) 100%);
+  color: -moz-linear-gradient(90deg, hsla(270, 39%, 44%, .85) 0%, hsla(223, 75%, 57%, .85) 100%);
+  color: -webkit-linear-gradient(90deg, hsla(270, 39%, 44%, .85) 0%, hsla(223, 75%, 57%, .85) 100%);
+}
+
+main .container .todo-list li span:last-of-type i {
+  left: 90%;
+  display: none;
+}
+
+main .container .todo-list li:hover span:last-of-type i {
+  display: block;
+}
+
+main .container .todo-list li:hover span:last-of-type i:hover {
+  color: #000;
+}
+
+main .container .filter-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  background-color: var(--white-color);
+  border-top: 1px solid var(--border-color);
+  border-radius: 0 0 5px 5px;
+  -webkit-border-radius: 0 0 5px 5px;
+  -moz-border-radius: 0 0 5px 5px;
+  -ms-border-radius: 0 0 5px 5px;
+  -o-border-radius: 0 0 5px 5px;
+}
+
+main .container .filter-bar ul.filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 40%;
+}
+
+main .container .filter-bar span.nbr-item {
+  cursor: default;
+}
+
+main .container .filter-bar span,
+main .container .filter-bar ul.filter li {
+  color: #777;
+  cursor: pointer;
+  font-size: .7em;
+}
+
+main .container .filter-bar span.clear:hover,
+main .container .filter-bar ul.filter li:hover {
+  color: #000;
+}
+
+main .container .filter-bar ul.filter li.active {
+  color: #3F6EE4;
+}
+
+main .container>p {
+  color: #777;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+/* end main content*/
+/* Start Grid System */
+@media (min-width: 576px) {
+
+  /* Small Devices => Landscape Phones */
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+
+  /* Medium Devices => Tablets */
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+
+  /* Desktops */
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  /* Large Screens */
+  .container {
+    max-width: 1140px;
+  }
+}
+
+/* End Grid System */
