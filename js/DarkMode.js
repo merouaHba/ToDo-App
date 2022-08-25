@@ -14,7 +14,6 @@ class DarkMode {
             if (theme === 'dark') {
                 document.body.classList.add('dark');
             }
-            console.log(theme);
             if (theme === 'dark') {
                 icon.setAttribute('class', 'bx bxs-sun')
             } else {

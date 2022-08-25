@@ -7,7 +7,7 @@ class ToDoApp extends DragAndDrop {
         this.arrayOfTasks = arrayOfTasks;
     }
 
-    
+
 // add task to arrayOfTasks
     addTasks(taskText) {
         const task = {
