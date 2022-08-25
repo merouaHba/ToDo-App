@@ -4,6 +4,11 @@ let addInput = document.querySelector('.write input');
 let listItems = document.querySelector('.todo-list');
 let dragStartIndex;
 let arrayOfTasks = [];
+
+
+
+addInput.focus();
+
 if (localStorage.getItem('tasks')) {
     arrayOfTasks = JSON.parse(localStorage.getItem('tasks'))
 }

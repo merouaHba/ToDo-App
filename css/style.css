@@ -45,8 +45,8 @@ button {
 }
 
 .container {
-  padding-left: 350px;
-  padding-right: 350px;
+  padding-right: 0;
+    padding-left: 0;
   margin-left: auto;
   margin-right: auto;
   position: relative;
@@ -82,7 +82,7 @@ header .container {
   justify-content: space-between;
   align-items: center;
   color: var(--white-color);
-  width: 75%;
+  width: 88%;
 }
 
 header .container h3 {
@@ -100,7 +100,7 @@ main {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 25%;
+  top: 28%;
 }
 
 main .container .write {
@@ -263,14 +263,21 @@ main .container>p {
   .container {
     max-width: 540px;
   }
+     header .container {
+       width: 52%;
+     }
 }
 
 @media (min-width: 768px) {
 
   /* Medium Devices => Tablets */
   .container {
+    
     max-width: 720px;
   }
+     header .container {
+       width: 40%;
+     }
 }
 
 @media (min-width: 992px) {
@@ -278,7 +285,15 @@ main .container>p {
   /* Desktops */
   .container {
     max-width: 960px;
+    padding-right: 25px;
+    padding-left: 25px;
   }
+    header .container {
+      width: 34%;
+    }
+        main {
+          top: 25%;
+        }
 }
 
 @media (min-width: 1200px) {
@@ -286,7 +301,12 @@ main .container>p {
   /* Large Screens */
   .container {
     max-width: 1140px;
+    padding-left: 350px;
+      padding-right: 350px;
   }
+    header .container {
+      width: 75%;
+    }
 }
 
 /* End Grid System */
