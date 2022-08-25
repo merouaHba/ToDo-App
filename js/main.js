@@ -9,6 +9,9 @@ let arrayOfTasks = [];
 
 addInput.focus();
 
+
+// get array of tasks from local storage
+
 if (localStorage.getItem('tasks')) {
     arrayOfTasks = JSON.parse(localStorage.getItem('tasks'))
 }
@@ -17,11 +20,13 @@ if (localStorage.getItem('tasks')) {
 let nbrItems = new NbrItems(arrayOfTasks);
 nbrItems.nbrItems();
 
+//  get tasks from local storage
 
 let toDoApp = new ToDoApp(filters, addInput, listItems, arrayOfTasks, dragStartIndex);
 toDoApp.getTaskFromLocalStorage();
 
 
+// add tache
 
 addInput.addEventListener('keypress', (e) => {
     if (e.keyCode == 13) {
@@ -39,16 +44,8 @@ addInput.addEventListener('keypress', (e) => {
 
 
 
-
-
-
-
-
-
-
-
 // toggle dark mode
-// add theme to localStorage
+
 let mode;
 let icon = document.querySelector('.mode-icon')
 
@@ -56,6 +53,9 @@ let darkMode = new DarkMode(mode,icon)
 
 let toggle = document.getElementById('toggle');
 toggle.addEventListener('click', darkMode.toggleMode);
+
+
+// get theme from localStorage
 
 darkMode.getThemeFromLocalStorage();
 
@@ -85,6 +85,7 @@ let clearBtn = document.querySelector(".clear");
 clearBtn.addEventListener("click", clearCompleted.clearCompleted)
 
 
+// filter taches onloading
 
 toDoApp.filterOnLoad();
 

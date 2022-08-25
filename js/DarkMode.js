@@ -5,12 +5,7 @@ class DarkMode {
     }
 
 
-   
 
-    // addThemeToLocalStorage() {
-    //     mode = document.body.getAttribute('Class');
-    //     window.localStorage.setItem('mode', mode);
-    // }
 
 
     getThemeFromLocalStorage() {

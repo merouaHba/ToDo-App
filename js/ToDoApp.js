@@ -7,6 +7,8 @@ class ToDoApp extends DragAndDrop {
         this.arrayOfTasks = arrayOfTasks;
     }
 
+    
+// add task to arrayOfTasks
     addTasks(taskText) {
         const task = {
             id: Date.now(),
@@ -24,7 +26,8 @@ class ToDoApp extends DragAndDrop {
 
 
 
-
+// add elements to page from array of tasks
+    
     addElementsToPageFromArray(arrayOfTasks) {
         let icon;
         listItems.innerHTML = '';
@@ -59,9 +62,16 @@ class ToDoApp extends DragAndDrop {
 
 
     }
+
+
+    // add task to local storage
+
     addTaskToLocalStorage(arrayOfTasks) {
         window.localStorage.setItem('tasks', JSON.stringify(arrayOfTasks));
     }
+
+    // get task from local storage
+
     getTaskFromLocalStorage() {
         let data = window.localStorage.getItem('tasks');
         if (data) {
@@ -69,7 +79,7 @@ class ToDoApp extends DragAndDrop {
             this.addElementsToPageFromArray(tasks);
         }
     }
-
+    // edit task 
     edit() {
         let taches = document.querySelectorAll('.todo-list li input');
         taches.forEach((tache, i) => {
@@ -96,7 +106,9 @@ class ToDoApp extends DragAndDrop {
         })
 
     }
+   
 
+    // delete task from local storage
 
     deleteTaskFromLocalStorage(id) {
         arrayOfTasks = arrayOfTasks.filter((task) => task.id != id)
@@ -127,7 +139,7 @@ class ToDoApp extends DragAndDrop {
 
 
 
-    // toggle completed state
+    // toggle completed status
     toggleStatus(id) {
         arrayOfTasks.forEach((task) => {
             if (task.id == id) {
@@ -159,7 +171,7 @@ class ToDoApp extends DragAndDrop {
 
 
 
-
+// filter taches
     filter(el) {
         let btn = el;
         if (btn.dataset.filter === "all") {
@@ -176,7 +188,8 @@ class ToDoApp extends DragAndDrop {
 
 
 
-
+// filter taches onloading
+    
     filterOnLoad() {
         if (window.localStorage.getItem('activeFilter')) {
             let active = window.localStorage.getItem('activeFilter');

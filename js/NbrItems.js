@@ -2,6 +2,7 @@ class NbrItems {
     constructor(arrayOfTasks) {
         this.arrayOfTasks = arrayOfTasks;
     }
+    // calcul nbr of tasks left
     nbrItems() {
         let array = arrayOfTasks.filter((task) => !task.completed);
         let span = document.querySelector(".nbr-item");
