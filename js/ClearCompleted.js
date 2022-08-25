@@ -7,9 +7,9 @@ class ClearCompleted extends ToDoApp {
     // clear All taches
     clearCompleted() {
         arrayOfTasks = arrayOfTasks.filter((task) => !task.completed);
-        supper.addTaskToLocalStorage(arrayOfTasks);
-        supper.addElementsToPageFromArray(arrayOfTasks);
-        supper.filterOnLoad();
+        super.addTaskToLocalStorage(arrayOfTasks);
+        super.addElementsToPageFromArray(arrayOfTasks);
+        super.filterOnLoad();
     }
 
 
