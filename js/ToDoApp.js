@@ -16,6 +16,7 @@ class ToDoApp extends DragAndDrop {
             completed: false,
         };
         arrayOfTasks.push(task);
+        console.log(task);
         this.addElementsToPageFromArray(arrayOfTasks);
         this.addTaskToLocalStorage(arrayOfTasks);
         addInput.value = '';
@@ -45,9 +46,10 @@ class ToDoApp extends DragAndDrop {
             listItem.setAttribute('draggable', true);
             listItem.innerHTML += `
             <span> <i class='check bx ${icon}' ></i></span>
-            <input type="text" value=${task.title} readonly>
+            <input type="text" value='${task.title}' readonly>
              <span class="delete"><i class='bx bx-x'></i></span>
       `;
+            console.log(task.title);
             listItems.appendChild(listItem);
             this.removeItem();
             this.edit();
